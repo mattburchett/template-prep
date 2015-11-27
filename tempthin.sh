@@ -1,4 +1,6 @@
 #!/bin/sh
+set -x
+
 
 # Determine the version of RHEL
 COND=`grep -i Taroon /etc/redhat-release`
