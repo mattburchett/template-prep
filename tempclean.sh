@@ -1,4 +1,5 @@
-#!/usrenv bash
+#!/usr/bin/env bash
+set -x 
 
 service rsyslog stop
 service auditd stop
