@@ -1,23 +1,23 @@
-#!/usr/bin/env bash
+#!/usrenv bash
 
-/sbin/service rsyslog stop
-/sbin/service auditd stop
-/bin/package-cleanup --oldkernels --count=1 -y
-/usr/bin/yum clean all
-/usr/sbin/logrotate -f /etc/logrotate.conf
-/bin/rm -f /var/log/*-???????? /var/log/*.gz
-/bin/rm -f /var/log/dmesg.old
-/bin/rm -rf /var/log/anaconda
-/bin/cat /dev/null > /var/log/audit/audit.log
-/bin/cat /dev/null > /var/log/wtmp
-/bin/cat /dev/null > /var/log/lastlog
-/bin/cat /dev/null > /var/log/grubby
-/bin/rm -f /etc/udev/rules.d/70*
-/bin/sed -i '/^(HWADDR|UUID)=/d' /etc/sysconfig/network-scripts/ifcfg-eth0
-/bin/rm -rf /tmp/*
-/bin/rm -rf /var/tmp/*
-/bin/rm -f /etc/ssh/*key*
-/bin/rm -f ~root/.bash_history
+service rsyslog stop
+service auditd stop
+package-cleanup --oldkernels --count=1 -y
+yum clean all
+logrotate -f /etc/logrotate.conf
+rm -f /var/log/*-???????? /var/log/*.gz
+rm -f /var/log/dmesg.old
+rm -rf /var/log/anaconda
+cat /dev/null > /var/log/audit/audit.log
+cat /dev/null > /var/log/wtmp
+cat /dev/null > /var/log/lastlog
+cat /dev/null > /var/log/grubby
+rm -f /etc/udev/rules.d/70*
+sed -i '/^(HWADDR|UUID)=/d' /etc/sysconfig/network-scripts/ifcfg-eth0
+rm -rf /tmp/*
+rm -rf /var/tmp/*
+rm -f /etc/ssh/*key*
+rm -f ~root/.bash_history
 unset HISTFILE
-/bin/rm -rf ~root/.ssh/
-/bin/rm -f ~root/anaconda-ks.cfg
+rm -rf ~root/.ssh/
+rm -f ~root/anaconda-ks.cfg
