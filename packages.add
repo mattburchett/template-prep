@@ -1,0 +1,4 @@
+kexec-tools lsof git nc vim-common vim-enhanced wget bind-utils yum-downloadonly virt-what dmidecode gcc gcc-c++ patch telnet autoconf automake libtool bison zlib zlib-devel bzip2 bzip2-devel openssl-devel make nmap rsync mtr man info zsh sysstat screen tmux net-snmp net-snmp-utils jwhois nfs-utils ntp yum-priorities device-mapper-multipath mailx readline readline-devel libyaml libyaml-devel subversion bc yum-downloadonly unzip htop vim-enhanced nano elinks ruby subversion zsh tmux screen htop xauth deltarpm git
+
+yum groupinstall "Development Tools"
+apt-get install build-essential
